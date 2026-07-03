@@ -16,11 +16,13 @@ IP_RE = re.compile(r'^(?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\
 def is_valid_ip(text: str) -> bool:
     return bool(IP_RE.match(text.strip()))
 
-BOT_TOKEN = os.environ.get("M3SB_BOT_TOKEN", "")
-DB_PATH   = os.environ.get("M3SB_DB_PATH",   "/opt/m3sb/m3sb.db")
-OWNER_IDS = set(os.environ.get("M3SB_ADMIN_IDS", "").split(","))
-LOG_DIR   = os.environ.get("M3SB_LOG_DIR",   "/opt/m3sb/logs")
-DATA_DIR  = os.environ.get("M3SB_DATA_DIR",  "/opt/m3sb/data")
+BOT_TOKEN = "8604553795:AAGu5-Gd4ArPPbbaP34BK1NJDkl8SkwS-jA"
+OWNER_IDS = {6676819684}
+
+# المسارات اللي عندك فيها الصلاحية كاملة وسط المجلد الحالي
+LOG_DIR = "./logs"
+DATA_DIR = "./data"
+DB_PATH = "./m3sb.db"
 
 DURATION_OPTIONS = [
     ("⏱ 1 Day", 86400), ("📅 3 Days", 259200), ("🗓 7 Days", 604800),
