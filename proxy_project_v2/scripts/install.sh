@@ -84,9 +84,9 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=/opt/m3sb
-Environment="M3SB_BOT_TOKEN=8604553795:AAGu5-Gd4ArPPbbaP34BK1NJDkl8SkwS-jA"
+Environment="M3SB_BOT_TOKEN=YOUR_BOT_TOKEN"
 Environment="M3SB_DB_PATH=/opt/m3sb/data/m3sb.db"
-Environment="M3SB_ADMIN_IDS=6676819684"
+Environment="M3SB_ADMIN_IDS=YOUR_ADMIN_IDS"
 Environment="M3SB_LOG_DIR=/opt/m3sb/logs"
 Environment="M3SB_DATA_DIR=/opt/m3sb/data"
 Environment="M3SB_API_PORT=8080"
