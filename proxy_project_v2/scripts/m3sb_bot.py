@@ -128,7 +128,8 @@ def init_db():
     conn.commit()
     cleanup_expired(conn); conn.close()
 
-def is_owner(uid: int) -> bool: return str(uid) in OWNER_IDS
+def is_owner(uid: int) -> bool:
+    return int(uid) in OWNER_IDS
 def is_reseller(uid: int) -> bool:
     conn = get_db()
     row = conn.execute("SELECT expires_at FROM resellers WHERE telegram_id = ? AND expires_at > ?", (str(uid), int(time.time()))).fetchone()
